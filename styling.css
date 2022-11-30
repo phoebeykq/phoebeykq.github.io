@@ -1,0 +1,163 @@
+@font-face {
+    font-family: "Calibre"; 
+    font-weight: 100; 
+    src: url("fonts/Calibre-Ultralight.ttf"); 
+}
+@font-face {
+    font-family: "Calibre"; 
+    font-weight: 200; 
+    src: url("fonts/Calibre-Thin.ttf"); 
+}
+@font-face {
+    font-family: "Calibre"; 
+    font-weight: 300; 
+    src: url("fonts/Calibre-Light.ttf"); 
+}
+@font-face {
+    font-family: "Calibre"; 
+    font-weight: 400; 
+    src: url("fonts/Calibre-Regular.ttf"); 
+}
+@font-face {
+    font-family: "Calibre"; 
+    font-weight: 500; 
+    src: url("fonts/Calibre-Medium.ttf"); 
+}
+@font-face {
+    font-family: "Calibre"; 
+    font-weight: 600; 
+    src: url("fonts/Calibre-Semibold.ttf"); 
+}
+@font-face {
+    font-family: "Calibre"; 
+    font-weight: 700; 
+    src: url("fonts/Calibre-Bold.ttf"); 
+}
+@font-face {
+    font-family: "Calibre"; 
+    font-weight: 800; 
+    src: url("fonts/Calibre-Heavy.ttf"); 
+}
+@font-face {
+    font-family: "Calibre"; 
+    font-weight: 900; 
+    src: url("fonts/Calibre-Black.ttf"); 
+}
+
+body {
+    font-family: "Calibre", Arial, Helvetica, sans-serif; 
+    font-size: clamp(2rem, 5vw, 4rem); 
+    background-color: white; 
+    color: black; 
+}
+
+.darkMode {
+    background-color: black; 
+    color: white; 
+}
+
+.sideBar {
+    height: 100%; 
+    width: 0; 
+    position: fixed; 
+    z-index: 1; 
+    top: 0; 
+    left: 0; 
+    background-color: #333; 
+    overflow-x: hidden; 
+    padding-top: 20vh; 
+    transition: 0.3s; 
+}
+
+.sideBarDark {
+    background-color: #ccc; 
+}
+
+.sideBar a {
+    padding: 1vh 1vw 1vh 1vw; 
+    text-decoration: none; 
+    text-align: center; 
+    font-size: clamp(2rem, 5vw, 5rem); 
+    color: #888; 
+    display: block; 
+    transition: 0.3s; 
+}
+
+.sideBarDark a {
+    color: #777; 
+}
+
+.sideBar a:hover {
+    color: white; 
+}
+
+.sideBarDark a:hover {
+    color: black; 
+}
+
+.sideBar .closeBtn {
+    position: absolute; 
+    top: 0; 
+    right: 15px; 
+    margin-left: 5px; 
+    font-size: 80px; 
+}
+
+.openBtn {
+    position: absolute; 
+    margin-top: 10px; 
+    margin-left: 15px; 
+    font-size: 40px; 
+    font-weight: bold; 
+    cursor: pointer; 
+}
+
+.toggle {
+    position: absolute; 
+    top: 25px; 
+    right: 25px; 
+    cursor: pointer; 
+}
+
+.toggle input[type=checkbox] {
+    display: none; 
+}
+/* --------------------------------- */
+.toggle label {
+    background-color: #ffff55; 
+    border: 2px solid #888; 
+    border-radius: 50px; 
+    display: inline-block; 
+    position: relative; 
+    transition: all ease-in-out 0.3s; 
+    width: 80px; 
+    height: 40px; 
+}
+
+.toggle label::after {
+    background-color: #888; 
+    border-radius: 50%; 
+    content: ' '; 
+    display: inline-block; 
+    position: absolute; 
+    left: 5px; 
+    top: 4px; 
+    transition: all ease-in-out 0.3s; 
+    width: 32px; 
+    height: 32px; 
+}
+
+.toggle input[type=checkbox]:checked ~ label {
+    background-color: #3333aa; 
+    border-color: #777; 
+}
+
+.toggle input[type=checkbox]:checked ~ label::after {
+    background-color: #777; 
+    transform: translateX(38px); 
+}
+
+#mainContent {
+    transition: margin-left 0.3s; 
+    padding: 15vh 20vw 0vh 20vw; 
+}
