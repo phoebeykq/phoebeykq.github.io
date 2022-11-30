@@ -95,6 +95,14 @@ body {
     color: black; 
 }
 
+.sideBar .currentPage {
+    color: white; 
+}
+
+.sideBarDark .currentPage {
+    color: black; 
+}
+
 .sideBar .closeBtn {
     position: absolute; 
     top: 0; 
@@ -114,7 +122,7 @@ body {
 
 .toggle {
     position: absolute; 
-    top: 25px; 
+    bottom: 0; 
     right: 25px; 
     cursor: pointer; 
 }
@@ -122,7 +130,7 @@ body {
 .toggle input[type=checkbox] {
     display: none; 
 }
-/* --------------------------------- */
+
 .toggle label {
     background-color: #ffff55; 
     border: 2px solid #888; 
@@ -130,8 +138,8 @@ body {
     display: inline-block; 
     position: relative; 
     transition: all ease-in-out 0.3s; 
-    width: 80px; 
-    height: 40px; 
+    width: 60px; 
+    height: 30px; 
 }
 
 .toggle label::after {
@@ -143,8 +151,8 @@ body {
     left: 5px; 
     top: 4px; 
     transition: all ease-in-out 0.3s; 
-    width: 32px; 
-    height: 32px; 
+    width: 22px; 
+    height: 22px; 
 }
 
 .toggle input[type=checkbox]:checked ~ label {
@@ -154,10 +162,41 @@ body {
 
 .toggle input[type=checkbox]:checked ~ label::after {
     background-color: #777; 
-    transform: translateX(38px); 
+    transform: translateX(28px); 
 }
 
 #mainContent {
     transition: margin-left 0.3s; 
     padding: 15vh 20vw 0vh 20vw; 
+}
+
+.intro1 {
+    font-size: clamp(3rem, 6vw, 6rem); 
+    position: relative; 
+    transition: transform 0.8s; 
+}
+
+.intro1:hover {
+    transform: translate(30px, 0); 
+}
+
+.intro2 {
+    font-size: clamp(3.5rem, 6.5vw, 6.5rem); 
+    font-weight: bold; 
+    position: relative; 
+    transition: transform 0.8s; 
+}
+
+.intro2:hover {
+    transform: translate(30px, 0); 
+}
+
+.intro3 {
+    font-size: clamp(2rem, 5vw, 4rem); 
+    position: relative; 
+    transition: transform 0.8s; 
+}
+
+.intro3:hover {
+    transform: translate(30px, 0); 
 }
