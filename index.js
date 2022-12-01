@@ -1,18 +1,22 @@
+const navMenu = document.getElementById("navMenu"); 
+const mainContent = document.getElementById("mainContent"); 
+
 function openNav() {
-    document.getElementById("navMenu").style.width = "30%"; 
-    document.getElementById("mainContent").style.marginLeft = "30%"; 
-    document.getElementById("mainContent").style.padding = "15vh 5vw 0vh 5vw"; 
+    navMenu.classList.remove("navMenuClosed"); 
+    navMenu.classList.add("navMenuOpened"); 
+    mainContent.classList.remove("mainContentClosed"); 
+    mainContent.classList.add("mainContentOpened"); 
 }
 
 function closeNav() {
-    document.getElementById("navMenu").style.width = "0"; 
-    document.getElementById("mainContent").style.marginLeft = "0"; 
-    document.getElementById("mainContent").style.padding = "15vh 20vw 0vh 20vw"; 
+    navMenu.classList.remove("navMenuOpened"); 
+    navMenu.classList.add("navMenuClosed"); 
+    mainContent.classList.remove("mainContentOpened"); 
+    mainContent.classList.add("mainContentClosed"); 
 }
 
-const toggle = document.getElementById("toggle"); 
 const body = document.body; 
-const navMenu = document.getElementById("navMenu"); 
+const toggle = document.getElementById("toggle"); 
 const shadow = document.getElementById("shadow"); 
 
 toggle.addEventListener("input", (e) => {

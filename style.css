@@ -47,6 +47,7 @@
 body {
     font-family: "Calibre", Arial, Helvetica, sans-serif; 
     font-size: clamp(2rem, 5vw, 4rem); 
+    margin: 0px; 
     background-color: white; 
     color: black; 
 }
@@ -56,16 +57,67 @@ body {
     color: white; 
 }
 
-.sideBar {
-    height: 100%; 
+#mainContent {
+    margin: 0px; 
+    transition: 0s; 
+}
+/*--------------------------------------------------*/
+.navMenuClosed {
     width: 0; 
+    height: 100%; 
     position: fixed; 
+    padding-top: 20vh; 
+}
+
+.mainContentClosed {
+    margin-left: 0; 
+    padding: 15vh 20vw 0vh 20vw; 
+}
+
+.navMenuOpened {
+    width: 30%; 
+    height: 100%; 
+    position: fixed; 
+    padding-top: 20vh; 
+}
+
+.mainContentOpened {
+    margin-left: 30%; 
+    padding: 15vh 5vw 0vh 5vw; 
+}
+
+@media screen and (max-width: 550px) {
+    .navMenuClosed {
+        width: 100%; 
+        height: 0; 
+        position: relative; 
+        padding-top: 5vh; 
+        padding-bottom: 5vh; 
+        display: none; 
+    }
+    .mainContentClosed {
+        margin-top: 0; 
+        padding: 15vh 20vw 0vh 20vw; 
+    }
+    .navMenuOpened {
+        width: 100%; 
+        height: 30%; 
+        position: relative; 
+        padding-top: 5vh; 
+        padding-bottom: 5vh; 
+    }
+    .mainContentOpened {
+        margin-top: 30%; 
+        padding: 10vh 20vw 0vh 20vw; 
+    }
+}
+/*--------------------------------------------------*/
+.sideBar {
     z-index: 1; 
     top: 0; 
     left: 0; 
     background-color: #333; 
     overflow-x: hidden; 
-    padding-top: 20vh; 
     transition: 0.5s; 
 }
 
@@ -107,14 +159,17 @@ body {
     position: absolute; 
     top: 0; 
     left: 0; 
-    margin-left: 5px; 
+    margin-top: 0.3vh; 
+    margin-left: 2.5vh; 
     font-size: 80px; 
 }
 
 .openBtn {
     position: absolute; 
-    margin-top: 10px; 
-    margin-left: 15px; 
+    top: 0; 
+    left: 0; 
+    margin-top: 2vh; 
+    margin-left: 3vh; 
     font-size: 40px; 
     font-weight: bold; 
     cursor: pointer; 
@@ -163,11 +218,6 @@ body {
 .toggle input[type=checkbox]:checked ~ label::after {
     background-color: #777; 
     transform: translateX(28px); 
-}
-
-#mainContent {
-    transition: margin-left 0s; 
-    padding: 15vh 20vw 0vh 20vw; 
 }
 
 .shadowLight {
