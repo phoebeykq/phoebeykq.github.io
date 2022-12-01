@@ -194,8 +194,18 @@ body {
     transition: all ease-in-out 0.3s; 
 }
 
+.toggle label::before {
+    content: "☾ ☼"; 
+    display: inline-block; 
+    position: absolute; 
+    font-size: 20px; 
+    letter-spacing: 5px; 
+    margin-left: 9px; 
+    color: gray; 
+}
+
 .toggle label::after {
-    content: ' '; 
+    content: " "; 
     display: inline-block; 
     position: absolute; 
     width: 22px; 

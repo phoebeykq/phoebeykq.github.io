@@ -56,10 +56,8 @@ toggle.addEventListener("input", function(event) {
     if(isChecked) {
         applyDarkTheme(); 
         checkTheme(); 
-        console.log(""); 
     } else {
         applyLightTheme(); 
         checkTheme(); 
-        console.log(""); 
     }
 }); 
