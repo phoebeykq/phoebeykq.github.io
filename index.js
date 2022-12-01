@@ -23,12 +23,12 @@ toggle.addEventListener("input", (e) => {
     const isChecked = e.target.checked; 
     if(isChecked) {
         body.classList.add("darkMode"); 
-        navMenu.classList.add("sideBarDark"); 
+        navMenu.classList.add("navBarDark"); 
         shadow.classList.add("shadowDark"); 
         shadow.classList.remove("shadowLight"); 
     } else {
         body.classList.remove("darkMode"); 
-        navMenu.classList.remove("sideBarDark"); 
+        navMenu.classList.remove("navBarDark"); 
         shadow.classList.remove("shadowDark"); 
         shadow.classList.add("shadowLight"); 
     }

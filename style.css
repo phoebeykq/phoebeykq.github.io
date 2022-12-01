@@ -112,7 +112,7 @@ body {
     }
 }
 /* -------------------- media query -------------------- */
-.sideBar {
+.navBar {
     z-index: 1; 
     top: 0; 
     left: 0; 
@@ -121,11 +121,11 @@ body {
     transition: 0.5s; 
 }
 
-.sideBarDark {
+.navBarDark {
     background-color: #ccc; 
 }
 
-.sideBar a {
+.navBar a {
     padding: 1vh 1vw 1vh 1vw; 
     text-decoration: none; 
     text-align: center; 
@@ -135,19 +135,19 @@ body {
     transition: 0.5s; 
 }
 
-.sideBar a:hover {
+.navBar a:hover {
     color: white; 
 }
 
-.sideBarDark a:hover {
+.navBarDark a:hover {
     color: black; 
 }
 
-.sideBar .currentPage {
+.navBar .currentPage {
     color: white; 
 }
 
-.sideBarDark .currentPage {
+.navBarDark .currentPage {
     color: black; 
 }
 
