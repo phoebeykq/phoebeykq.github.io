@@ -11,11 +11,11 @@
 </head>
 
 <body>
-    <nav id="navMenu" class="sideBar">
-        <a href="javascript:void(0)" class="closeBtn" onclick="closeNav()">&times;</a>
-        <a href="index.html">home</a>
+    <nav id="navMenu" class="navMenuClosed sideBar">
+        <span class="closeBtn" onclick="closeNav()">&times;</span>
+        <a href="index.html" class="currentPage">home</a>
         <a href="work.html">work</a>
-        <a href="about.html" class="currentPage">about</a>
+        <a href="about.html">about</a>
         <a href="contact.html">contact</a>
     </nav>
     <span class="openBtn" onclick="openNav()">&#9776;</span>
@@ -23,8 +23,10 @@
         <input type="checkbox" id="toggle">
         <label for="toggle"></label>
     </span>
-    <div id="mainContent">
-            <span>About Me</span>
+    <div id="mainContent" class="mainContentClosed">
+        <div>
+            <span>sample text sample text sample text sample text sample text sample text sample text sample text</span>
+        </div>
     </div>
     <script src="index.js"></script>
 </body>
