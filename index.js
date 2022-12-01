@@ -13,19 +13,19 @@ function closeNav() {
 const toggle = document.getElementById("toggle"); 
 const body = document.body; 
 const navMenu = document.getElementById("navMenu"); 
-const intro = document.getElementById("intro"); 
+const shadow = document.getElementById("shadow"); 
 
 toggle.addEventListener("input", (e) => {
     const isChecked = e.target.checked; 
     if(isChecked) {
         body.classList.add("darkMode"); 
         navMenu.classList.add("sideBarDark"); 
-        intro.classList.add("introDark"); 
-        intro.classList.remove("introLight"); 
+        shadow.classList.add("shadowDark"); 
+        shadow.classList.remove("shadowLight"); 
     } else {
         body.classList.remove("darkMode"); 
         navMenu.classList.remove("sideBarDark"); 
-        intro.classList.remove("introDark"); 
-        intro.classList.add("introLight"); 
+        shadow.classList.remove("shadowDark"); 
+        shadow.classList.add("shadowLight"); 
     }
 }); 
