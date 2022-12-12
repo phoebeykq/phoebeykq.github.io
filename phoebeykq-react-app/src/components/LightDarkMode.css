@@ -1,0 +1,58 @@
+body {
+    transition: 0.3s; 
+}
+
+#light-switch {
+    position: absolute; 
+    bottom: 15px; 
+    right: 25px; 
+    cursor: pointer; 
+}
+
+#light-switch input[type=checkbox] {
+    display: none; 
+}
+
+#light-switch label {
+    display: inline-block; 
+    position: relative; 
+    width: 60px; 
+    height: 30px; 
+    background-color: #ffff55; 
+    border: 2px solid gray; 
+    border-radius: 50px; 
+    transition: all ease-in-out 0.3s; 
+}
+
+#light-switch label::before {
+    content: "☾ ☼"; 
+    display: inline-block; 
+    position: absolute; 
+    font-size: 20px; 
+    letter-spacing: 5px; 
+    margin-left: 9px; 
+    color: gray; 
+}
+
+#light-switch label::after {
+    content: " "; 
+    display: inline-block; 
+    position: absolute; 
+    width: 22px; 
+    height: 22px; 
+    top: 4px; 
+    left: 5px; 
+    background-color: gray; 
+    border-radius: 50%; 
+    transition: all ease-in-out 0.3s; 
+}
+
+#light-switch input[type=checkbox]:checked ~ label {
+    background-color: #3333aa; 
+    border-color: gray; 
+}
+
+#light-switch input[type=checkbox]:checked ~ label::after {
+    background-color: gray; 
+    transform: translateX(28px); 
+}
